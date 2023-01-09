@@ -22,7 +22,7 @@ function convertToJson(response) {
 async function getData(url, callback) {
   const data = await fetch(url);
   const json = await convertToJson(data);
-  console.log(json);
+  // console.log(json);
   if (callback) {
     callback(json);
   }
@@ -71,6 +71,16 @@ const renderPokeList = (list) => {
   const header = document.createElement("h2");
   header.innerHTML = `${list.name} (${list.pokemon.length})`;
   element.appendChild(header);
+
+  // console.log(list);
+  const pokeList = list.pokemon;
+  pokeList.forEach((poke) => {
+    const pokemon = poke.pokemon;
+    const li = document.createElement("li");
+    li.innerHTML = `${pokemon.name}`;
+    li.setAttribute("class", "pokemon");
+    element.appendChild(li);
+  });
 };
 // set active item
 
