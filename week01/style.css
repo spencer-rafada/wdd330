@@ -29,7 +29,7 @@ section {
   cursor: pointer;
 }
 
-.types>li:hover, .types>li:active {
+.types>li:hover, .types>li.active {
   background-color: #50E3A3;
   color:white;
   border-color: #3bb982;

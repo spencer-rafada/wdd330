@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
 const renderTypeList = (list) => {
   const element = document.getElementById("typeList");
 
-  const cleanList = list.results;
+  const cleanList = cleanTypeList(list.results);
 
   cleanList.forEach((item) => {
     const li = document.createElement("li");
@@ -61,6 +61,7 @@ function typeClickedHandler(event) {
   // anything data-x attribute = dataset.x
   const url = selectType.dataset.url;
   getData(url, renderPokeList);
+  setActive(url);
 }
 
 // render the list
@@ -73,15 +74,31 @@ const renderPokeList = (list) => {
   element.appendChild(header);
 
   // console.log(list);
-  const pokeList = list.pokemon;
-  pokeList.forEach((poke) => {
-    const pokemon = poke.pokemon;
+  list.pokemon.forEach((item) => {
+    const pokemon = item.pokemon;
     const li = document.createElement("li");
     li.innerHTML = `${pokemon.name}`;
-    li.setAttribute("class", "pokemon");
+    li.classList.add("pokemon");
+    li.setAttribute("data-url", pokemon.url);
     element.appendChild(li);
   });
 };
+
 // set active item
+function setActive(type) {
+  const allTypes = document.querySelectorAll(".types > li");
+  allTypes.forEach((item) => {
+    if (item.dataset.url === type) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
 
 // there are no pokemon in unknown and shadow. Let's remove them from the list.
+const cleanTypeList = (list) => {
+  return list.filter(
+    (item) => item.name !== "shadow" && item.name !== "unknown"
+  );
+};
