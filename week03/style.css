@@ -1,0 +1,109 @@
+body {
+    background-color:#FBEBDC;
+    font-family: 'EB Garamond', serif;
+}
+#authorSelect {
+        background-color: #f8f5f0;
+        padding: 0.7em 0.3em;
+        font-size: 1.3em;
+}
+h1 {
+    font-size:3em;
+    text-align: center;
+    margin:0.4em;
+    color:#C5B4A2;
+}
+section {
+    display:grid;
+    grid-template-columns: 1fr;
+    text-align:left;
+    max-width:380px;
+    margin:0 auto;
+}
+section button {
+    background-color:#534b41;
+    color:white;
+    padding:0.7em 0.4em;
+    font-size:1.2em;
+    font-family: 'EB Garamond', serif;
+    cursor: pointer;
+    margin-top:0.5em;
+}
+section button:hover {
+    background-color: #3c362e;
+}
+#output {
+    display: grid;
+    gap: 4em;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    padding: 0;
+    list-style-type: none;
+    margin: 40px;
+  }
+#output li {
+    background-color:#f8f5f0;
+    color:black;
+    padding:120px 40px;
+    line-height: 1.37em;
+    font-size:1.3em;
+    border:1.3em solid #C5B4A2;
+    box-shadow: 2px 2px 3px #0000006a;
+}
+#output li h3 {
+	font-size: 2.5em;
+	border-bottom: solid 1px black;
+	padding-bottom: 38px;
+	margin-bottom: 33px;
+    margin-top:10px;
+    color:#534b41;
+}
+.position1 {
+    background-position: bottom right;
+}
+.position2 {
+    background-position: bottom left;
+}
+.position3 {
+    background-position: bottom center;
+}
+.position4 {
+    background-position: top right;
+}
+.position5 {
+    background-position: top left;
+}
+.position6 {
+    background-position: top center;
+}
+.icon1 {
+    background-image: url("images/icon1.jpg");
+    background-repeat: no-repeat;
+}
+.icon2 {
+    background-image: url("images/icon2.jpg");
+    background-repeat: no-repeat;
+}
+.icon3 {
+    background-image: url("images/icon3.jpg");
+    background-repeat: no-repeat;
+}
+.icon4 {
+    background-image: url("images/icon4.jpg");
+    background-repeat: no-repeat;
+}
+.icon5 {
+    background-image: url("images/icon5.jpg");
+    background-repeat: no-repeat;
+}
+.icon6 {
+    background-image: url("images/icon6.jpg");
+    background-repeat: no-repeat;
+}
+.icon7 {
+    background-image: url("images/icon7.jpg");
+    background-repeat: no-repeat;
+}
+.icon8 {
+    background-image: url("images/icon8.jpg");
+    background-repeat: no-repeat;
+}
