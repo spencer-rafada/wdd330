@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "title": "My class is Awesome!!",
+      "content": "Especially Joseph.",
+      "tags": [
+        "tag1"
+      ],
+      "id": 1
+    },
+    {
+      "title": "Hello World!",
+      "content": "from computer",
+      "tags": [
+        "tag2"
+      ],
+      "id": 2
+    },
+    {
+      "title": "hello",
+      "content": "world",
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
+      "id": 3
+    },
+    {
+      "title": "test",
+      "content": "test",
+      "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+      ],
+      "dropdown": "active",
+      "id": 4
+    },
+    {
+      "title": "I'm in active in the church",
+      "content": "I don't go to church.",
+      "tags": [
+        "tag2"
+      ],
+      "dropdown": "inactive",
+      "id": 5
+    }
+  ]
+}
