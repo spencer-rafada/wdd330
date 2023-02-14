@@ -1,34 +1,60 @@
+html {
+  background-color: rgb(29, 29, 29);
+}
+
+main>h1,
+main>p {
+  text-align: center;
+  color: hsl(137, 100%, 50%);
+}
+
 .iNaturalistContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
   row-gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
   border-radius: 1rem;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.364);
-  padding: 1rem;
-  transition: 0.2s transform;
-  background-color: white;
+  background-color: rgb(29, 29, 29);
 }
 
-.itemContainer h1 {
+.itemContainer h1,
+.itemContainer h3,
+.itemContainer p,
+.itemContainer a {
+  color: white;
   margin: 0;
-}
-
-.itemContainer img {
-  width: 100%;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
 .itemContainer h3 {
   font-size: 1rem;
 }
 
-.itemContainer:hover {
-  transform: scale(1.1)
+.itemContainer div {
+  padding: 1rem;
+  padding-top: 0;
 }
 
-.itemContainer:hover h1 {
-  color: red;
+.itemContainer img {
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  object-fit: cover;
+}
+
+.itemContainer audio::-webkit-media-controls-panel {
+  background-color: hsl(137, 100%, 50%);
 }

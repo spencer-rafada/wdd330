@@ -40,14 +40,19 @@ export default class MainPage {
   renderTemplate = (item) => {
     return `
     <div class="itemContainer">
-    <h1>${item.species_guess}</h1>
-    <h3>${item.place_guess}</h3>
-    <a href="${item.uri}">Click Me</a>
     <img src="${item.photos[0].url}" alt="${item.species_guess}-img">
+    <div>
+    <a href="${item.uri}" target="_blank">
+    <h1>${item.species_guess}</h1>
+    </a>
+    <a href="https://www.google.com/maps/search/${item.place_guess}" target="_blank">
+    <h3>${item.place_guess}</h3>
+    </a>
     <p>${item.description}</p>
     <audio controls>
-      <source src="${item.sounds[0].file_url}">
+    <source src="${item.sounds[0].file_url}">
     </audio>
+    </div>
     </div>`;
   };
 }
