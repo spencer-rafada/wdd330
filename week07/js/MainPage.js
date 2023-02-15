@@ -43,12 +43,21 @@ export default class MainPage {
     <img src="${item.photos[0].url}" alt="${item.species_guess}-img">
     <div>
     <a href="${item.uri}" target="_blank">
-    <h1>${item.species_guess}</h1>
+    <h1>${item.species_guess === null ? "No Guess" : item.species_guess}</h1>
     </a>
-    <a href="https://www.google.com/maps/search/${item.place_guess}" target="_blank">
+    <a href="https://www.google.com/maps/search/${
+      item.place_guess
+    }" target="_blank">
     <h3>${item.place_guess}</h3>
     </a>
-    <p>${item.description}</p>
+    <p>${
+      item.description === undefined ||
+      item.description === null ||
+      item.description === ""
+        ? ""
+        : item.description
+    }</p>
+    <p class="itemFave">Fave Count: ${item.faves_count}</p>
     <audio controls>
     <source src="${item.sounds[0].file_url}">
     </audio>
